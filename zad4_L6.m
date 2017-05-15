@@ -13,6 +13,10 @@ for m=1:M
         C_width(i,m)=2*1.96*std(payoff(1:n,m))/sqrt(n);
     end
 end
+figure()
+boxplot(C_mean')
+figure()
+boxplot(C_width')
 %Black-Scholes
 %d_plus=(log(S/K)+(r+sigma^2/2)*T/12)/sigma/sqrt(T/12)
 %d_minus=(log(S/K)+(r-sigma^2/2)*T/12)/sigma/sqrt(T/12)
