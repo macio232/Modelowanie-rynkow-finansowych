@@ -8,8 +8,8 @@ dB=randn(N,T);
 X=S*ones(N,1);
 K=100;
 for i=2:T+1
-    X(:,i)=X(:,i-1)+r*X(:,i-1)*dt/12+sigma*X(:,i-1).*dB(:,i-1);
-    %X(:,i)=X(:,i-1).*exp((r-sigma^2/2)*1/12+sigma*(1/12)^0.5*dB(:,i-1));
+    %X(:,i)=X(:,i-1)+r*X(:,i-1)*dt/12+sigma*X(:,i-1).*dB(:,i-1);
+    X(:,i)=X(:,i-1).*exp((r-sigma^2/2)*dt/12+sigma*(dt/12)^0.5*dB(:,i-1));
 end
 F=max(X(:,T+1)-K,0)*exp(-r*T/12);
 CALL_MC=mean(F)
