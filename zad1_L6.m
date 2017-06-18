@@ -9,7 +9,7 @@ for i=1:5
     S_T=S_T.*exp((r-sigma^2/2)*1/12+sigma*(1/12)^0.5*Z);
 end
 payoff=max(S_T-K,0)*exp(-r*T/12);
-c=mean(payoff);
+c=mean(payoff)
 w=[c-1.96*std(payoff)/n^0.5 c+1.96*std(payoff)/n^0.5];
 %Black-Scholes
 d_plus=(log(S/K)+(r+sigma^2/2)*T/12)/sigma/sqrt(T/12)
