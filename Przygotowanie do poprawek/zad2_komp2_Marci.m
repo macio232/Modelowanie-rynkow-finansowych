@@ -3,7 +3,7 @@ S0=100;
 K=102;
 r=.05;
 sigma=.2;
-n=10000;   %iloœæ kroków - parametr do zmiany
+n=12;   %iloœæ kroków - parametr do zmiany
 T=3/12;
 dt=T/n;
 u=exp(sqrt(dt)*sigma);
@@ -22,6 +22,6 @@ for j=flip(1:n)
 end
 wyplata(1,1)
 
-d_plus=(log(S/K)+(r+sigma^2/2)*dt)/(sigma*sqrt(dt))
-d_minus=(log(S/K)+(r-sigma^2/2)*dt)/(sigma*sqrt(dt))
-Scholes1=-S*icdf('Normal',-d_plus,0,1)+K*exp(-r*dt)*icdf('Normal',-d_minus,0,1)
+%d_plus=(log(S/K)+(r+sigma^2/2)*dt)/(sigma*sqrt(dt))
+%d_minus=(log(S/K)+(r-sigma^2/2)*dt)/(sigma*sqrt(dt))
+%Scholes1=-S*icdf('Normal',-d_plus,0,1)+K*exp(-r*dt)*icdf('Normal',-d_minus,0,1)
