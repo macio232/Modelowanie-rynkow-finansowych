@@ -29,5 +29,5 @@ mean(payoff)
 
 d_minus=(log(S0/K)+(mu-sigma^2/2)*T/12)/(sigma*sqrt(T/12));
 d_plus=(log(S0/K)+(mu+sigma^2/2)*T/12)/(sigma*sqrt(T/12));
-BS=S0*cdf('norm',d_plus,0,1)-K*exp(-mu*T/15)*cdf('norm',d_minus,0,1)
+BS=S0*cdf('norm',d_plus,0,1)-K*exp(-mu*T/12)*cdf('norm',d_minus,0,1)
     
